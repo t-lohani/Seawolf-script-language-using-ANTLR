@@ -74,6 +74,11 @@ class SeawolfExprVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by SeawolfExprParser#NegNum.
+    def visitNegNum(self, ctx:SeawolfExprParser.NegNumContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by SeawolfExprParser#Modulus.
     def visitModulus(self, ctx:SeawolfExprParser.ModulusContext):
         return self.visitChildren(ctx)

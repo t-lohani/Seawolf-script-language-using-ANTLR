@@ -6,10 +6,11 @@ stat:   expr NEWLINE                                        # PrintExpr
     |   NEWLINE                                             # Blank
     ;
 
-expr:   '(' expr ')'                                        # Parens
+expr:   op=SUB expr                                         # NegNum
+    |   '(' expr ')'                                        # Parens
     |   expr op=(MUL|DIV) expr                              # MulDiv
     |   expr op=MOD expr                                    # Modulus
-    |   expr op=EXP expr                                    # Exponent
+    |   <assoc=right>   expr op=EXP expr                    # Exponent
     |   expr op=FLRDIV expr                                 # FloorDivision
     |   expr op=(ADD|SUB) expr                              # AddSub
     |   expr op=(LESS|LESSEQ|GRT|GRTEQ|EQUAL|NOTEQ) expr    # Logical
