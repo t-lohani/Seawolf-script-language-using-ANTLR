@@ -14,6 +14,10 @@ class MyVisitor(SeawolfExprVisitor):
     def visitInt(self, ctx):
         return int((ctx.INT().getText()))
 
+    def visitNegNum(self, ctx):
+        val = self.visit(ctx.expr())
+        return val*-1
+
     def visitString(self, ctx):
         str = ctx.ID().getText()
         return str[1:-1]
@@ -85,7 +89,7 @@ class MyVisitor(SeawolfExprVisitor):
                 return 0
 
     def visitBinaryNot(self, ctx):
-        val = self.visit(ctx.expr)
+        val = self.visit(ctx.expr())
         if val == 0:
             return 1
         else:
