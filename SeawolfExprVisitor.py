@@ -84,6 +84,11 @@ class SeawolfExprVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by SeawolfExprParser#Search.
+    def visitSearch(self, ctx:SeawolfExprParser.SearchContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by SeawolfExprParser#Real.
     def visitReal(self, ctx:SeawolfExprParser.RealContext):
         return self.visitChildren(ctx)
@@ -91,6 +96,21 @@ class SeawolfExprVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by SeawolfExprParser#BinaryOr.
     def visitBinaryOr(self, ctx:SeawolfExprParser.BinaryOrContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SeawolfExprParser#List.
+    def visitList(self, ctx:SeawolfExprParser.ListContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SeawolfExprParser#IndexList.
+    def visitIndexList(self, ctx:SeawolfExprParser.IndexListContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SeawolfExprParser#list_expr.
+    def visitList_expr(self, ctx:SeawolfExprParser.List_exprContext):
         return self.visitChildren(ctx)
 
 

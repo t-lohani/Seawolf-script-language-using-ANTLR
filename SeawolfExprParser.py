@@ -5,30 +5,36 @@ from io import StringIO
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\31")
-        buf.write("?\4\2\t\2\4\3\t\3\4\4\t\4\3\2\6\2\n\n\2\r\2\16\2\13\3")
-        buf.write("\3\3\3\3\3\3\3\5\3\22\n\3\3\4\3\4\3\4\3\4\3\4\3\4\3\4")
-        buf.write("\3\4\3\4\3\4\3\4\3\4\5\4 \n\4\3\4\3\4\3\4\3\4\3\4\3\4")
+        buf.write("\3\u0430\ud6d1\u8206\uad2d\u4417\uaef1\u8d80\uaadd\3\35")
+        buf.write("U\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\3\2\6\2\f\n\2\r\2\16")
+        buf.write("\2\r\3\3\3\3\3\3\3\3\5\3\24\n\3\3\4\3\4\3\4\3\4\3\4\3")
+        buf.write("\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\5\4&\n\4\3")
+        buf.write("\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4")
         buf.write("\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3")
-        buf.write("\4\3\4\3\4\3\4\3\4\7\4:\n\4\f\4\16\4=\13\4\3\4\2\3\6\5")
-        buf.write("\2\4\6\2\5\3\2\5\6\3\2\7\b\3\2\f\21J\2\t\3\2\2\2\4\21")
-        buf.write("\3\2\2\2\6\37\3\2\2\2\b\n\5\4\3\2\t\b\3\2\2\2\n\13\3\2")
-        buf.write("\2\2\13\t\3\2\2\2\13\f\3\2\2\2\f\3\3\2\2\2\r\16\5\6\4")
-        buf.write("\2\16\17\7\30\2\2\17\22\3\2\2\2\20\22\7\30\2\2\21\r\3")
-        buf.write("\2\2\2\21\20\3\2\2\2\22\5\3\2\2\2\23\24\b\4\1\2\24\25")
-        buf.write("\7\b\2\2\25 \5\6\4\20\26\27\7\3\2\2\27\30\5\6\4\2\30\31")
-        buf.write("\7\4\2\2\31 \3\2\2\2\32\33\7\22\2\2\33 \5\6\4\b\34 \7")
-        buf.write("\25\2\2\35 \7\26\2\2\36 \7\27\2\2\37\23\3\2\2\2\37\26")
-        buf.write("\3\2\2\2\37\32\3\2\2\2\37\34\3\2\2\2\37\35\3\2\2\2\37")
-        buf.write("\36\3\2\2\2 ;\3\2\2\2!\"\f\16\2\2\"#\t\2\2\2#:\5\6\4\17")
-        buf.write("$%\f\r\2\2%&\7\t\2\2&:\5\6\4\16\'(\f\f\2\2()\7\n\2\2)")
-        buf.write(":\5\6\4\f*+\f\13\2\2+,\7\13\2\2,:\5\6\4\f-.\f\n\2\2./")
-        buf.write("\t\3\2\2/:\5\6\4\13\60\61\f\t\2\2\61\62\t\4\2\2\62:\5")
-        buf.write("\6\4\n\63\64\f\7\2\2\64\65\7\23\2\2\65:\5\6\4\b\66\67")
-        buf.write("\f\6\2\2\678\7\24\2\28:\5\6\4\79!\3\2\2\29$\3\2\2\29\'")
-        buf.write("\3\2\2\29*\3\2\2\29-\3\2\2\29\60\3\2\2\29\63\3\2\2\29")
-        buf.write("\66\3\2\2\2:=\3\2\2\2;9\3\2\2\2;<\3\2\2\2<\7\3\2\2\2=")
-        buf.write(";\3\2\2\2\7\13\21\379;")
+        buf.write("\4\3\4\3\4\3\4\3\4\7\4H\n\4\f\4\16\4K\13\4\3\5\3\5\3\5")
+        buf.write("\3\5\3\5\3\5\5\5S\n\5\3\5\2\3\6\6\2\4\6\b\2\5\3\2\b\t")
+        buf.write("\3\2\n\13\3\2\17\24d\2\13\3\2\2\2\4\23\3\2\2\2\6%\3\2")
+        buf.write("\2\2\bR\3\2\2\2\n\f\5\4\3\2\13\n\3\2\2\2\f\r\3\2\2\2\r")
+        buf.write("\13\3\2\2\2\r\16\3\2\2\2\16\3\3\2\2\2\17\20\5\6\4\2\20")
+        buf.write("\21\7\34\2\2\21\24\3\2\2\2\22\24\7\34\2\2\23\17\3\2\2")
+        buf.write("\2\23\22\3\2\2\2\24\5\3\2\2\2\25\26\b\4\1\2\26\27\7\13")
+        buf.write("\2\2\27&\5\6\4\23\30\31\7\3\2\2\31\32\5\6\4\2\32\33\7")
+        buf.write("\4\2\2\33&\3\2\2\2\34\35\7\25\2\2\35&\5\6\4\13\36&\7\31")
+        buf.write("\2\2\37&\7\32\2\2 &\7\33\2\2!\"\7\5\2\2\"#\5\b\5\2#$\7")
+        buf.write("\6\2\2$&\3\2\2\2%\25\3\2\2\2%\30\3\2\2\2%\34\3\2\2\2%")
+        buf.write("\36\3\2\2\2%\37\3\2\2\2% \3\2\2\2%!\3\2\2\2&I\3\2\2\2")
+        buf.write("\'(\f\21\2\2()\t\2\2\2)H\5\6\4\22*+\f\20\2\2+,\7\f\2\2")
+        buf.write(",H\5\6\4\21-.\f\17\2\2./\7\r\2\2/H\5\6\4\17\60\61\f\16")
+        buf.write("\2\2\61\62\7\16\2\2\62H\5\6\4\17\63\64\f\r\2\2\64\65\t")
+        buf.write("\3\2\2\65H\5\6\4\16\66\67\f\f\2\2\678\t\4\2\28H\5\6\4")
+        buf.write("\r9:\f\n\2\2:;\7\26\2\2;H\5\6\4\13<=\f\t\2\2=>\7\27\2")
+        buf.write("\2>H\5\6\4\n?@\f\b\2\2@A\7\30\2\2AH\5\6\4\tBC\f\3\2\2")
+        buf.write("CD\7\5\2\2DE\5\6\4\2EF\7\6\2\2FH\3\2\2\2G\'\3\2\2\2G*")
+        buf.write("\3\2\2\2G-\3\2\2\2G\60\3\2\2\2G\63\3\2\2\2G\66\3\2\2\2")
+        buf.write("G9\3\2\2\2G<\3\2\2\2G?\3\2\2\2GB\3\2\2\2HK\3\2\2\2IG\3")
+        buf.write("\2\2\2IJ\3\2\2\2J\7\3\2\2\2KI\3\2\2\2LM\5\6\4\2MN\7\7")
+        buf.write("\2\2NO\5\b\5\2OS\3\2\2\2PS\5\6\4\2QS\3\2\2\2RL\3\2\2\2")
+        buf.write("RP\3\2\2\2RQ\3\2\2\2S\t\3\2\2\2\b\r\23%GIR")
         return buf.getvalue()
 
 
@@ -42,45 +48,52 @@ class SeawolfExprParser ( Parser ):
 
     sharedContextCache = PredictionContextCache()
 
-    literalNames = [ "<INVALID>", "'('", "')'", "'*'", "'/'", "'+'", "'-'", 
-                     "'%'", "'**'", "'//'", "'<'", "'<='", "'>'", "'>='", 
-                     "'=='", "'<>'", "'not'", "'and'", "'or'" ]
+    literalNames = [ "<INVALID>", "'('", "')'", "'['", "']'", "','", "'*'", 
+                     "'/'", "'+'", "'-'", "'%'", "'**'", "'//'", "'<'", 
+                     "'<='", "'>'", "'>='", "'=='", "'<>'", "'not'", "'and'", 
+                     "'or'", "'in'" ]
 
-    symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "MUL", "DIV", 
-                      "ADD", "SUB", "MOD", "EXP", "FLRDIV", "LESS", "LESSEQ", 
-                      "GRT", "GRTEQ", "EQUAL", "NOTEQ", "NOT", "AND", "OR", 
-                      "INT", "REAL", "ID", "NEWLINE", "WS" ]
+    symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
+                      "<INVALID>", "<INVALID>", "MUL", "DIV", "ADD", "SUB", 
+                      "MOD", "EXP", "FLRDIV", "LESS", "LESSEQ", "GRT", "GRTEQ", 
+                      "EQUAL", "NOTEQ", "NOT", "AND", "OR", "IN", "INT", 
+                      "REAL", "ID", "NEWLINE", "WS" ]
 
     RULE_prog = 0
     RULE_stat = 1
     RULE_expr = 2
+    RULE_list_expr = 3
 
-    ruleNames =  [ "prog", "stat", "expr" ]
+    ruleNames =  [ "prog", "stat", "expr", "list_expr" ]
 
     EOF = Token.EOF
     T__0=1
     T__1=2
-    MUL=3
-    DIV=4
-    ADD=5
-    SUB=6
-    MOD=7
-    EXP=8
-    FLRDIV=9
-    LESS=10
-    LESSEQ=11
-    GRT=12
-    GRTEQ=13
-    EQUAL=14
-    NOTEQ=15
-    NOT=16
-    AND=17
-    OR=18
-    INT=19
-    REAL=20
-    ID=21
-    NEWLINE=22
-    WS=23
+    T__2=3
+    T__3=4
+    T__4=5
+    MUL=6
+    DIV=7
+    ADD=8
+    SUB=9
+    MOD=10
+    EXP=11
+    FLRDIV=12
+    LESS=13
+    LESSEQ=14
+    GRT=15
+    GRTEQ=16
+    EQUAL=17
+    NOTEQ=18
+    NOT=19
+    AND=20
+    OR=21
+    IN=22
+    INT=23
+    REAL=24
+    ID=25
+    NEWLINE=26
+    WS=27
 
     def __init__(self, input:TokenStream):
         super().__init__(input)
@@ -122,16 +135,16 @@ class SeawolfExprParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 7 
+            self.state = 9 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 6
+                self.state = 8
                 self.stat()
-                self.state = 9 
+                self.state = 11 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SeawolfExprParser.T__0) | (1 << SeawolfExprParser.SUB) | (1 << SeawolfExprParser.NOT) | (1 << SeawolfExprParser.INT) | (1 << SeawolfExprParser.REAL) | (1 << SeawolfExprParser.ID) | (1 << SeawolfExprParser.NEWLINE))) != 0)):
+                if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SeawolfExprParser.T__0) | (1 << SeawolfExprParser.T__2) | (1 << SeawolfExprParser.SUB) | (1 << SeawolfExprParser.NOT) | (1 << SeawolfExprParser.INT) | (1 << SeawolfExprParser.REAL) | (1 << SeawolfExprParser.ID) | (1 << SeawolfExprParser.NEWLINE))) != 0)):
                     break
 
         except RecognitionException as re:
@@ -199,21 +212,21 @@ class SeawolfExprParser ( Parser ):
         localctx = SeawolfExprParser.StatContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_stat)
         try:
-            self.state = 15
+            self.state = 17
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [SeawolfExprParser.T__0, SeawolfExprParser.SUB, SeawolfExprParser.NOT, SeawolfExprParser.INT, SeawolfExprParser.REAL, SeawolfExprParser.ID]:
+            if token in [SeawolfExprParser.T__0, SeawolfExprParser.T__2, SeawolfExprParser.SUB, SeawolfExprParser.NOT, SeawolfExprParser.INT, SeawolfExprParser.REAL, SeawolfExprParser.ID]:
                 localctx = SeawolfExprParser.PrintExprContext(self, localctx)
                 self.enterOuterAlt(localctx, 1)
-                self.state = 11
+                self.state = 13
                 self.expr(0)
-                self.state = 12
+                self.state = 14
                 self.match(SeawolfExprParser.NEWLINE)
                 pass
             elif token in [SeawolfExprParser.NEWLINE]:
                 localctx = SeawolfExprParser.BlankContext(self, localctx)
                 self.enterOuterAlt(localctx, 2)
-                self.state = 14
+                self.state = 16
                 self.match(SeawolfExprParser.NEWLINE)
                 pass
             else:
@@ -506,6 +519,29 @@ class SeawolfExprParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
+    class SearchContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a SeawolfExprParser.ExprContext
+            super().__init__(parser)
+            self.op = None # Token
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(SeawolfExprParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(SeawolfExprParser.ExprContext,i)
+
+        def IN(self):
+            return self.getToken(SeawolfExprParser.IN, 0)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitSearch" ):
+                return visitor.visitSearch(self)
+            else:
+                return visitor.visitChildren(self)
+
+
     class RealContext(ExprContext):
 
         def __init__(self, parser, ctx:ParserRuleContext): # actually a SeawolfExprParser.ExprContext
@@ -545,6 +581,43 @@ class SeawolfExprParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
+    class ListContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a SeawolfExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def list_expr(self):
+            return self.getTypedRuleContext(SeawolfExprParser.List_exprContext,0)
+
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitList" ):
+                return visitor.visitList(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class IndexListContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a SeawolfExprParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(SeawolfExprParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(SeawolfExprParser.ExprContext,i)
+
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIndexList" ):
+                return visitor.visitIndexList(self)
+            else:
+                return visitor.visitChildren(self)
+
+
 
     def expr(self, _p:int=0):
         _parentctx = self._ctx
@@ -556,7 +629,7 @@ class SeawolfExprParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 29
+            self.state = 35
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [SeawolfExprParser.SUB]:
@@ -564,57 +637,68 @@ class SeawolfExprParser ( Parser ):
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 18
+                self.state = 20
                 localctx.op = self.match(SeawolfExprParser.SUB)
-                self.state = 19
-                self.expr(14)
+                self.state = 21
+                self.expr(17)
                 pass
             elif token in [SeawolfExprParser.T__0]:
                 localctx = SeawolfExprParser.ParensContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 20
-                self.match(SeawolfExprParser.T__0)
-                self.state = 21
-                self.expr(0)
                 self.state = 22
+                self.match(SeawolfExprParser.T__0)
+                self.state = 23
+                self.expr(0)
+                self.state = 24
                 self.match(SeawolfExprParser.T__1)
                 pass
             elif token in [SeawolfExprParser.NOT]:
                 localctx = SeawolfExprParser.BinaryNotContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 24
+                self.state = 26
                 localctx.op = self.match(SeawolfExprParser.NOT)
-                self.state = 25
-                self.expr(6)
+                self.state = 27
+                self.expr(9)
                 pass
             elif token in [SeawolfExprParser.INT]:
                 localctx = SeawolfExprParser.IntContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 26
+                self.state = 28
                 self.match(SeawolfExprParser.INT)
                 pass
             elif token in [SeawolfExprParser.REAL]:
                 localctx = SeawolfExprParser.RealContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 27
+                self.state = 29
                 self.match(SeawolfExprParser.REAL)
                 pass
             elif token in [SeawolfExprParser.ID]:
                 localctx = SeawolfExprParser.StringContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 28
+                self.state = 30
                 self.match(SeawolfExprParser.ID)
+                pass
+            elif token in [SeawolfExprParser.T__2]:
+                localctx = SeawolfExprParser.ListContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 31
+                self.match(SeawolfExprParser.T__2)
+                self.state = 32
+                self.list_expr()
+                self.state = 33
+                self.match(SeawolfExprParser.T__3)
                 pass
             else:
                 raise NoViableAltException(self)
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 57
+            self.state = 71
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,4,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
@@ -622,17 +706,17 @@ class SeawolfExprParser ( Parser ):
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 55
+                    self.state = 69
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
                     if la_ == 1:
                         localctx = SeawolfExprParser.MulDivContext(self, SeawolfExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 31
-                        if not self.precpred(self._ctx, 12):
+                        self.state = 37
+                        if not self.precpred(self._ctx, 15):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 12)")
-                        self.state = 32
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 15)")
+                        self.state = 38
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not(_la==SeawolfExprParser.MUL or _la==SeawolfExprParser.DIV):
@@ -640,57 +724,57 @@ class SeawolfExprParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 33
-                        self.expr(13)
+                        self.state = 39
+                        self.expr(16)
                         pass
 
                     elif la_ == 2:
                         localctx = SeawolfExprParser.ModulusContext(self, SeawolfExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 34
-                        if not self.precpred(self._ctx, 11):
+                        self.state = 40
+                        if not self.precpred(self._ctx, 14):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 11)")
-                        self.state = 35
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 14)")
+                        self.state = 41
                         localctx.op = self.match(SeawolfExprParser.MOD)
-                        self.state = 36
-                        self.expr(12)
+                        self.state = 42
+                        self.expr(15)
                         pass
 
                     elif la_ == 3:
                         localctx = SeawolfExprParser.ExponentContext(self, SeawolfExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 37
-                        if not self.precpred(self._ctx, 10):
+                        self.state = 43
+                        if not self.precpred(self._ctx, 13):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 10)")
-                        self.state = 38
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 13)")
+                        self.state = 44
                         localctx.op = self.match(SeawolfExprParser.EXP)
-                        self.state = 39
-                        self.expr(10)
+                        self.state = 45
+                        self.expr(13)
                         pass
 
                     elif la_ == 4:
                         localctx = SeawolfExprParser.FloorDivisionContext(self, SeawolfExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 40
-                        if not self.precpred(self._ctx, 9):
+                        self.state = 46
+                        if not self.precpred(self._ctx, 12):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 9)")
-                        self.state = 41
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 12)")
+                        self.state = 47
                         localctx.op = self.match(SeawolfExprParser.FLRDIV)
-                        self.state = 42
-                        self.expr(10)
+                        self.state = 48
+                        self.expr(13)
                         pass
 
                     elif la_ == 5:
                         localctx = SeawolfExprParser.AddSubContext(self, SeawolfExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 43
-                        if not self.precpred(self._ctx, 8):
+                        self.state = 49
+                        if not self.precpred(self._ctx, 11):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
-                        self.state = 44
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 11)")
+                        self.state = 50
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not(_la==SeawolfExprParser.ADD or _la==SeawolfExprParser.SUB):
@@ -698,18 +782,18 @@ class SeawolfExprParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 45
-                        self.expr(9)
+                        self.state = 51
+                        self.expr(12)
                         pass
 
                     elif la_ == 6:
                         localctx = SeawolfExprParser.LogicalContext(self, SeawolfExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 46
-                        if not self.precpred(self._ctx, 7):
+                        self.state = 52
+                        if not self.precpred(self._ctx, 10):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
-                        self.state = 47
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 10)")
+                        self.state = 53
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << SeawolfExprParser.LESS) | (1 << SeawolfExprParser.LESSEQ) | (1 << SeawolfExprParser.GRT) | (1 << SeawolfExprParser.GRTEQ) | (1 << SeawolfExprParser.EQUAL) | (1 << SeawolfExprParser.NOTEQ))) != 0)):
@@ -717,38 +801,66 @@ class SeawolfExprParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 48
-                        self.expr(8)
+                        self.state = 54
+                        self.expr(11)
                         pass
 
                     elif la_ == 7:
                         localctx = SeawolfExprParser.BinaryAndContext(self, SeawolfExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 49
-                        if not self.precpred(self._ctx, 5):
+                        self.state = 55
+                        if not self.precpred(self._ctx, 8):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 50
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
+                        self.state = 56
                         localctx.op = self.match(SeawolfExprParser.AND)
-                        self.state = 51
-                        self.expr(6)
+                        self.state = 57
+                        self.expr(9)
                         pass
 
                     elif la_ == 8:
                         localctx = SeawolfExprParser.BinaryOrContext(self, SeawolfExprParser.ExprContext(self, _parentctx, _parentState))
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 52
-                        if not self.precpred(self._ctx, 4):
+                        self.state = 58
+                        if not self.precpred(self._ctx, 7):
                             from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                        self.state = 53
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
+                        self.state = 59
                         localctx.op = self.match(SeawolfExprParser.OR)
-                        self.state = 54
-                        self.expr(5)
+                        self.state = 60
+                        self.expr(8)
+                        pass
+
+                    elif la_ == 9:
+                        localctx = SeawolfExprParser.SearchContext(self, SeawolfExprParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 61
+                        if not self.precpred(self._ctx, 6):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 6)")
+                        self.state = 62
+                        localctx.op = self.match(SeawolfExprParser.IN)
+                        self.state = 63
+                        self.expr(7)
+                        pass
+
+                    elif la_ == 10:
+                        localctx = SeawolfExprParser.IndexListContext(self, SeawolfExprParser.ExprContext(self, _parentctx, _parentState))
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 64
+                        if not self.precpred(self._ctx, 1):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 1)")
+                        self.state = 65
+                        self.match(SeawolfExprParser.T__2)
+                        self.state = 66
+                        self.expr(0)
+                        self.state = 67
+                        self.match(SeawolfExprParser.T__3)
                         pass
 
              
-                self.state = 59
+                self.state = 73
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,4,self._ctx)
 
@@ -758,6 +870,70 @@ class SeawolfExprParser ( Parser ):
             self._errHandler.recover(self, re)
         finally:
             self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+    class List_exprContext(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def expr(self):
+            return self.getTypedRuleContext(SeawolfExprParser.ExprContext,0)
+
+
+        def list_expr(self):
+            return self.getTypedRuleContext(SeawolfExprParser.List_exprContext,0)
+
+
+        def getRuleIndex(self):
+            return SeawolfExprParser.RULE_list_expr
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitList_expr" ):
+                return visitor.visitList_expr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def list_expr(self):
+
+        localctx = SeawolfExprParser.List_exprContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_list_expr)
+        try:
+            self.state = 80
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,5,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 74
+                self.expr(0)
+                self.state = 75
+                self.match(SeawolfExprParser.T__4)
+                self.state = 76
+                self.list_expr()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 78
+                self.expr(0)
+                pass
+
+            elif la_ == 3:
+                self.enterOuterAlt(localctx, 3)
+
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
         return localctx
 
 
@@ -774,35 +950,43 @@ class SeawolfExprParser ( Parser ):
 
     def expr_sempred(self, localctx:ExprContext, predIndex:int):
             if predIndex == 0:
-                return self.precpred(self._ctx, 12)
+                return self.precpred(self._ctx, 15)
          
 
             if predIndex == 1:
-                return self.precpred(self._ctx, 11)
+                return self.precpred(self._ctx, 14)
          
 
             if predIndex == 2:
-                return self.precpred(self._ctx, 10)
+                return self.precpred(self._ctx, 13)
          
 
             if predIndex == 3:
-                return self.precpred(self._ctx, 9)
+                return self.precpred(self._ctx, 12)
          
 
             if predIndex == 4:
-                return self.precpred(self._ctx, 8)
+                return self.precpred(self._ctx, 11)
          
 
             if predIndex == 5:
-                return self.precpred(self._ctx, 7)
+                return self.precpred(self._ctx, 10)
          
 
             if predIndex == 6:
-                return self.precpred(self._ctx, 5)
+                return self.precpred(self._ctx, 8)
          
 
             if predIndex == 7:
-                return self.precpred(self._ctx, 4)
+                return self.precpred(self._ctx, 7)
+         
+
+            if predIndex == 8:
+                return self.precpred(self._ctx, 6)
+         
+
+            if predIndex == 9:
+                return self.precpred(self._ctx, 1)
          
 
 
