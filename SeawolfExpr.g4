@@ -17,10 +17,18 @@ expr:   op=SUB expr                                         # NegNum
     |   op=NOT expr                                         # BinaryNot
     |   expr op=AND expr                                    # BinaryAnd
     |   expr op=OR expr                                     # BinaryOr
+    |   expr op=IN expr                                     # Search
     |   INT                                                 # Int
     |   REAL                                                # Real
     |   ID                                                  # String
+    |   '[' list_expr ']'                                   # List
+    |   expr '[' expr ']'                                   # IndexList
     ;
+
+list_expr : expr ',' list_expr
+          | expr
+          |
+          ;
 
 MUL     :   '*' ;                                   // Multiplication operator
 DIV     :   '/' ;                                   // Division operator
@@ -38,8 +46,9 @@ NOTEQ   :   '<>' ;                                  // Not equal to
 NOT     :   'not' ;                                 // Binary NOT
 AND     :   'and' ;                                 // Binary AND
 OR      :   'or' ;                                  // Binary OR
+IN      :   'in' ;                                  // List 'in'
 INT     :   [0-9]+ ;                                // match integers
 REAL    :   [0-9]* ('.'[0-9] | [0-9]'.') [0-9]* ;   // match reals
-ID      :   '"' [a-zA-Z]+ '"' ;                      // match identifiers
+ID      :   '"' [a-zA-Z]+ '"' ;                     // match identifiers
 NEWLINE :'\r'? '\n' ;                               // return newlines to parser (is end-statement signal)
 WS      : [ \t\r\n]+ -> skip ;                      // skip spaces, tabs, newlines

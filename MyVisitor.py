@@ -113,3 +113,23 @@ class MyVisitor(SeawolfExprVisitor):
 
     def visitParens(self, ctx):
         return self.visit(ctx.expr())
+
+    def visitList(self, ctx):
+        ret_list = []
+        list_start = ctx.list_expr()
+        ret_list.append(self.visit(list_start.expr()))
+        tail = list_start.list_expr()
+        while not tail == None:
+            ret_list.append(self.visit(tail.expr()))
+            tail = tail.list_expr()
+        return ret_list
+
+    def visitIndexList(self, ctx):
+        left = self.visit(ctx.expr(0))
+        right = self.visit(ctx.expr(1))
+        return left[right]
+
+    def visitSearch(self, ctx):
+        left = self.visit(ctx.expr(0))
+        right = self.visit(ctx.expr(1))
+        return left in right
