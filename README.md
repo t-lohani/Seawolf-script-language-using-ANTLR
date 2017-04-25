@@ -55,25 +55,194 @@ Each expression prints one of three possible outputs:
 - If one of the "must" conditions given above is violated when evaluating it : SEMANTIC ERROR.
 - Otherwise evalute the expression and print the result.
  
-An example input file (inputFile.expr) might look like:
-1 - 2 + 3
-1 2 3
-42 + "Red"
-1 - (2 + 3)
-"Hello" + " " + "SeaWolf."
-[1, 2, 3][0] + 40
+For this assignment, we add support for variables, conditionals, looping, and output.
 
+Variable names must begin with an ASCII letter, which may be followed by zero or more ASCII letters, digits and underscore. A regular expression that matches variable names is '[A-Za-z][A-Za-z0-9_]*'.
 
-The output from this file should look like:
-2
-SYNTAX ERROR
-SEMANTIC ERROR
--4
-'Hello SeaWolf'
-41
+For now, our script has only a single scope for variables: a global static scope.
 
+Our expressions from the previous assignment need to be extended in two ways: we need to add support for variables by extending the grammar so that variables can be used wherever a literal can be used. Evaluating a variable in an expression should have the following behavior: if the variable has had a value assigned to it, the value should be returned. Otherwise, a semantic error should be generated. When a variable is used as a location (on the left-hand side of an assignment), then a variable location is used.
 
-The program can be run with a command like:
-python3 seawolf.py inputFile.expr
+There are 5 kinds of statements:
 
-or can be run in an IDE with command line inputs.
+- Block: a block statement consists of zero-or-more statements enclosed in curly braces {...}. When the block executes, each of the statements in the block is executed in sequential order.
+
+- Assignment: an assignment statement consists of a variable, an equals sign, an expression, and a semicolon. When the assignment statement executes, the right-expression is evaluated for the value and it is assigned to the left variable. Notice that this does not support multiple assignment equals as in python: a,b=1,2;
+
+- If: an if statement consists of the keyword "if", a left-parenthesis, an expression, a right-parenthesis, and a block body statement. Optionally, there might be an "else block". When the if statement executes, the expression is evaluated. If that value is not zero, the "then block" is executed, else the "else block" is executed.
+
+- While: a  while statement consists of the keyword "while", a left-parenthesis, an expression, a right-parenthesis, and a body statement. Executing the while statement begins by evaluating the condition for an value. If the value is 0, the while statement terminates. Otherwise, the while statement executes its body statement, and execution repeats.
+
+- Print: a print statement consists of the "print" keyword, a left-parenthesis, an expression, a right-parenthesis, and a semicolon. When the print statement executes, the expression is evaluated for a value and printed using the python print statement.
+
+A program consists of a single outermost statement, which may contain statements inside it. Usually, this is a block statement, but any statement is valid. Executing the program consists of executing this outermost statement. When the outermost statement finishes executing, the program terminates.
+
+Your interpreter will be called with a single argument. This argument will be a file containing a program. If the program contains syntax error, your interpreter should print out: SYNTAX ERROR. Otherwise, you should execute the program. If the execution of the program causes a semantic error, then your interpreter should print out: SEMANTIC ERROR. Execution of the program may cause print statements to execute. Output from print statements should be sent to standard output. No other output should be produced. An example input script might look like:
+
+Example 1:
+
+{
+
+  number = 100;
+
+  isPrime = 1;
+
+  i = 2;
+
+  while(isPrime==1 and i) {
+
+    if (number%i==0) {
+
+      isPrime = 0;
+
+    }
+
+   i = i + 1;
+
+  }
+
+  if(isPrime==1){
+
+    print("isPrime is true");
+
+  } else {
+
+    print("isPrime is false");
+
+  }
+
+}
+
+Output: isPrime is false
+
+Example 2:
+
+{
+
+  number1 = 125;
+
+  number2 = 210;
+
+  print("The minimum is: ");
+
+  if (number1 < number2) {
+
+    print(number1);
+
+  } else {
+
+    print(number2);
+
+  }
+
+}
+
+Output: The minimum is: 125
+
+Example 3: minIndex in an array
+
+{
+
+  data = [ 300, 125, 12, 65, 9943, 9000 ];
+
+  min = data[0];
+
+  minIndex = 0;
+
+  i = 1;
+
+  while (i < 6){
+
+    if (data[i] < min){
+
+       min = data[i];
+
+       minIndex = i;
+
+    }
+
+   i = i + 1;
+
+  }
+
+  print(minIndex);
+
+}
+
+Output: 2
+
+Example 4:
+
+{
+
+  number1 = 25;
+
+  number2 = 10;
+
+  while(number1 <> number2) {
+
+    if (number1 > number2) {
+
+      number1 = number1 - number2;
+
+    } else {
+
+      number2 = number2 - number1;
+
+    }
+
+  }
+
+  print("The greatest common divider is: ");
+
+  print(number1);
+
+}
+
+Output: The greatest common divider is: 5
+
+Example 5:
+
+{
+
+    data = [ [ 100, 42 ], [ 100, 50 ], [ 123, 456 ], [ 300, 9000 ] ];
+
+    result = [ 0, 0, 0, 0 ];
+
+    i = 0;
+
+    while (i < 4){
+
+        a = data[i][0];
+
+        b = data[i][1];
+
+        if (a > 0){
+
+            while (b > 0){
+
+                if (a > b){
+
+                    a = a - b;
+
+                } else {
+
+                    b = b - a;
+
+                }
+
+           }
+
+        }
+
+        result[i] = a;
+
+        i = i + 1;
+
+    }
+
+    print(result);
+
+}
+
+Output: [2, 50, 3, 300]
