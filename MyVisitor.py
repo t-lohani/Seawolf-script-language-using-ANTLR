@@ -1,3 +1,5 @@
+import sys
+
 from SeawolfExprVisitor import SeawolfExprVisitor
 from SeawolfExprParser import SeawolfExprParser
 
@@ -6,9 +8,49 @@ class MyVisitor(SeawolfExprVisitor):
     def __init__(self):
         self.memory = {}
 
-    def visitPrintExpr(self, ctx):
-        value = self.visit(ctx.expr())
-        print(value)
+    def visitAssignStat(self, ctx):
+        name = ctx.VAR().getText()
+        expr_list = ctx.expr()
+
+        if len(expr_list) == 1:
+            self.memory[name] = self.visit(ctx.expr(0))
+        else:
+            index = []
+            for expr in expr_list[:-1]:
+                index.append(self.visit(expr))
+            ret_val = self.update_ary(self.memory[name], index, self.visit(expr_list[-1]))
+            self.memory[name] = ret_val
+
+    def visitIfElseStat(self, ctx):
+        val = self.visit(ctx.expr())
+        block_list = ctx.block()
+        if len(block_list) == 1:
+            if val > 0:
+                self.visit(ctx.block(0))
+        else:
+            if val > 0:
+                self.visit(ctx.block(0))
+            else:
+                self.visit(ctx.block(1))
+
+    def visitWhileStat(self, ctx):
+        while (self.visit(ctx.expr()) > 0):
+            self.visit(ctx.block())
+
+    def update_ary(self, input, indices, val_to_update):
+        if indices == []:
+            return val_to_update
+        input[indices[0]] = self.update_ary(input[indices[0]], indices[1:], val_to_update)
+        return input
+
+    def visitPrintStat(self, ctx):
+        sys.stdout.write(str(self.visit(ctx.expr())))
+        # print(self.visit(ctx.expr()))
+
+    def visitVar(self, ctx):
+        name = ctx.VAR().getText()
+        if name in self.memory:
+            return self.memory[name]
         return 0
 
     def visitInt(self, ctx):
@@ -19,7 +61,7 @@ class MyVisitor(SeawolfExprVisitor):
         return val*-1
 
     def visitString(self, ctx):
-        str = ctx.ID().getText()
+        str = ctx.STRING().getText()
         return str[1:-1]
 
     def visitReal(self, ctx):

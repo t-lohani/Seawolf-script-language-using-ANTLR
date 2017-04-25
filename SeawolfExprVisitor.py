@@ -14,13 +14,38 @@ class SeawolfExprVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by SeawolfExprParser#PrintExpr.
-    def visitPrintExpr(self, ctx:SeawolfExprParser.PrintExprContext):
+    # Visit a parse tree produced by SeawolfExprParser#AssignStat.
+    def visitAssignStat(self, ctx:SeawolfExprParser.AssignStatContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by SeawolfExprParser#Blank.
-    def visitBlank(self, ctx:SeawolfExprParser.BlankContext):
+    # Visit a parse tree produced by SeawolfExprParser#BlankStat.
+    def visitBlankStat(self, ctx:SeawolfExprParser.BlankStatContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SeawolfExprParser#BlockStat.
+    def visitBlockStat(self, ctx:SeawolfExprParser.BlockStatContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SeawolfExprParser#IfElseStat.
+    def visitIfElseStat(self, ctx:SeawolfExprParser.IfElseStatContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SeawolfExprParser#WhileStat.
+    def visitWhileStat(self, ctx:SeawolfExprParser.WhileStatContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SeawolfExprParser#PrintStat.
+    def visitPrintStat(self, ctx:SeawolfExprParser.PrintStatContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SeawolfExprParser#block.
+    def visitBlock(self, ctx:SeawolfExprParser.BlockContext):
         return self.visitChildren(ctx)
 
 
@@ -56,6 +81,11 @@ class SeawolfExprVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by SeawolfExprParser#Parens.
     def visitParens(self, ctx:SeawolfExprParser.ParensContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by SeawolfExprParser#Var.
+    def visitVar(self, ctx:SeawolfExprParser.VarContext):
         return self.visitChildren(ctx)
 
 
